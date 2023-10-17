@@ -8,3 +8,4 @@ data/*
 .idea
 wcapi.json
 wcapi_token.json
+app_cache
