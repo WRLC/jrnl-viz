@@ -957,8 +957,8 @@ observeEvent(input$get_wc, {
   # Only proceed if there is an API key present
   if(ws_key_exists) {
     
-    # Only proceed with less than 3000 records
-    if(nrow(values$df) <= 3000) {
+    # Only proceed with less than 10000 records
+    if(nrow(values$df) <= 10000) {
       showModal(
         
         # footer = NULL so that the modal can't be closed by the user
@@ -1001,11 +1001,11 @@ observeEvent(input$get_wc, {
       
     } else {
       
-      # Don't run with more than 3000 records in a request
+      # Don't run with more than 10000 records in a request
       showModal(
         modalDialog(
           title = NULL,
-          HTML("Please adjust your filters to retrieve 3000 or fewer records.</br></br>
+          HTML("Please adjust your filters to retrieve 10000 or fewer records.</br></br>
                If you have a larger request, please contact your stackR admin directly.")
         )
       )
